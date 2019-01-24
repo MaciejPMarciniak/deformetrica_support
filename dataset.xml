@@ -1,0 +1,423 @@
+<?xml version='1.0' encoding='ASCII'?>
+<data-set>
+  <subject id="sub01">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case01_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case01_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case01_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case01_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case01_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case01_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case01_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case01_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case01_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case01_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case01_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case01_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case01_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case01_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case01_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case01_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case01_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub02">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case02_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case02_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case02_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case02_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case02_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case02_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case02_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case02_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case02_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case02_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case02_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case02_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case02_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case02_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case02_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case02_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case02_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub03">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case03_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case03_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case03_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case03_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case03_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case03_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case03_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case03_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case03_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case03_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case03_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case03_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case03_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case03_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case03_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case03_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case03_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub04">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case04_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case04_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case04_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case04_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case04_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case04_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case04_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case04_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case04_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case04_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case04_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case04_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case04_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case04_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case04_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case04_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case04_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub05">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case05_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case05_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case05_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case05_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case05_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case05_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case05_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case05_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case05_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case05_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case05_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case05_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case05_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case05_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case05_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case05_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case05_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub06">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case06_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case06_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case06_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case06_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case06_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case06_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case06_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case06_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case06_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case06_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case06_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case06_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case06_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case06_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case06_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case06_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case06_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub07">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case07_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case07_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case07_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case07_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case07_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case07_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case07_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case07_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case07_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case07_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case07_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case07_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case07_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case07_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case07_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case07_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case07_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub08">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case08_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case08_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case08_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case08_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case08_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case08_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case08_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case08_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case08_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case08_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case08_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case08_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case08_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case08_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case08_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case08_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case08_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub09">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case09_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case09_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case09_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case09_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case09_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case09_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case09_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case09_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case09_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case09_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case09_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case09_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case09_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case09_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case09_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case09_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case09_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub10">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case10_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case10_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case10_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case10_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case10_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case10_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case10_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case10_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case10_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case10_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case10_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case10_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case10_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case10_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case10_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case10_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case10_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub11">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case11_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case11_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case11_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case11_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case11_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case11_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case11_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case11_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case11_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case11_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case11_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case11_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case11_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case11_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case11_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case11_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case11_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub12">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case12_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case12_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case12_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case12_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case12_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case12_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case12_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case12_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case12_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case12_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case12_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case12_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case12_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case12_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case12_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case12_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case12_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub13">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case13_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case13_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case13_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case13_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case13_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case13_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case13_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case13_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case13_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case13_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case13_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case13_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case13_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case13_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case13_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case13_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case13_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub14">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case14_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case14_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case14_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case14_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case14_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case14_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case14_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case14_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case14_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case14_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case14_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case14_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case14_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case14_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case14_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case14_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case14_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub15">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case15_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case15_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case15_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case15_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case15_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case15_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case15_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case15_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case15_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case15_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case15_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case15_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case15_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case15_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case15_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case15_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case15_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub16">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case16_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case16_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case16_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case16_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case16_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case16_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case16_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case16_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case16_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case16_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case16_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case16_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case16_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case16_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case16_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case16_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case16_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub17">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case17_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case17_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case17_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case17_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case17_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case17_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case17_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case17_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case17_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case17_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case17_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case17_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case17_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case17_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case17_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case17_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case17_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub18">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case18_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case18_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case18_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case18_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case18_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case18_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case18_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case18_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case18_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case18_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case18_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case18_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case18_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case18_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case18_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case18_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case18_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub19">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case19_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case19_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case19_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case19_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case19_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case19_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case19_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case19_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case19_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case19_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case19_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case19_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case19_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case19_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case19_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case19_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case19_IVC.vtk</filename>
+    </visit>
+  </subject>
+  <subject id="sub20">
+    <visit id="varifold">
+      <filename object_id="LV">/home/mat/Python/data/case_/tetra_meshes/h_case20_LV.vtk</filename>
+      <filename object_id="RV">/home/mat/Python/data/case_/tetra_meshes/h_case20_RV.vtk</filename>
+      <filename object_id="LA">/home/mat/Python/data/case_/tetra_meshes/h_case20_LA.vtk</filename>
+      <filename object_id="RA">/home/mat/Python/data/case_/tetra_meshes/h_case20_RA.vtk</filename>
+      <filename object_id="AO">/home/mat/Python/data/case_/tetra_meshes/h_case20_AO.vtk</filename>
+      <filename object_id="PA">/home/mat/Python/data/case_/tetra_meshes/h_case20_PA.vtk</filename>
+      <filename object_id="MV">/home/mat/Python/data/case_/tetra_meshes/h_case20_MV.vtk</filename>
+      <filename object_id="TV">/home/mat/Python/data/case_/tetra_meshes/h_case20_TV.vtk</filename>
+      <filename object_id="AV">/home/mat/Python/data/case_/tetra_meshes/h_case20_AV.vtk</filename>
+      <filename object_id="PV">/home/mat/Python/data/case_/tetra_meshes/h_case20_PV.vtk</filename>
+      <filename object_id="APP">/home/mat/Python/data/case_/tetra_meshes/h_case20_APP.vtk</filename>
+      <filename object_id="LIPV">/home/mat/Python/data/case_/tetra_meshes/h_case20_LIPV.vtk</filename>
+      <filename object_id="LSPV">/home/mat/Python/data/case_/tetra_meshes/h_case20_LSPV.vtk</filename>
+      <filename object_id="RSPV">/home/mat/Python/data/case_/tetra_meshes/h_case20_RSPV.vtk</filename>
+      <filename object_id="RIPV">/home/mat/Python/data/case_/tetra_meshes/h_case20_RIPV.vtk</filename>
+      <filename object_id="SVC">/home/mat/Python/data/case_/tetra_meshes/h_case20_SVC.vtk</filename>
+      <filename object_id="IVC">/home/mat/Python/data/case_/tetra_meshes/h_case20_IVC.vtk</filename>
+    </visit>
+  </subject>
+</data-set>

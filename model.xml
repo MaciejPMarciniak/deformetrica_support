@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='ASCII'?>
+<model>
+  <model-type>DeterministicAtlas</model-type>
+  <dimension>3</dimension>
+  <template>
+    <object id="LV">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_LV.vtk</filename>
+    </object>
+    <object id="RV">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_RV.vtk</filename>
+    </object>
+    <object id="LA">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_LA.vtk</filename>
+    </object>
+    <object id="RA">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_RA.vtk</filename>
+    </object>
+    <object id="AO">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_AO.vtk</filename>
+    </object>
+    <object id="PA">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_PA.vtk</filename>
+    </object>
+    <object id="MV">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_MV.vtk</filename>
+    </object>
+    <object id="TV">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_TV.vtk</filename>
+    </object>
+    <object id="AV">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_AV.vtk</filename>
+    </object>
+    <object id="PV">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_PV.vtk</filename>
+    </object>
+    <object id="APP">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_APP.vtk</filename>
+    </object>
+    <object id="LIPV">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_LIPV.vtk</filename>
+    </object>
+    <object id="LSPV">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_LSPV.vtk</filename>
+    </object>
+    <object id="RSPV">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_RSPV.vtk</filename>
+    </object>
+    <object id="RIPV">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_RIPV.vtk</filename>
+    </object>
+    <object id="SVC">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_SVC.vtk</filename>
+    </object>
+    <object id="IVC">
+      <deformable-object-type>Polyline</deformable-object-type>
+      <attachment-type>Varifold</attachment-type>
+      <kernel-width>10</kernel-width>
+      <kernel-type>keops</kernel-type>
+      <noise-std>0.1</noise-std>
+      <filename>/home/mat/Python/data/case_/tetra_meshes/h_case01_IVC.vtk</filename>
+    </object>
+  </template>
+  <deformation-parameters>
+    <kernel-width>10</kernel-width>
+    <kernel-type>keops</kernel-type>
+  </deformation-parameters>
+</model>
