@@ -12,6 +12,7 @@ class HandleMomenta:
                  momenta_matrix=None, configuration='deformetrica'):
         """
         Read the basic information about the data set
+
         :param momenta_file_path: hard path to the generated momenta file
         """
         self.momenta_file_path = momenta_file_path
@@ -48,6 +49,7 @@ class HandleMomenta:
         The method transforms original file to a table where number of rows is determined by the number of models used
         to calculate the atlas, and columns describe deformation of the template (average shape) in x, y and z
         direction, with regards to control points, effectively defining the warping field for each original model.
+
         :return: self.all_modesl - Momenta of all models. The order of values corresponds to dimension: in a row,
         firstly all the x values are given, then all the y, then z.
         """
@@ -62,12 +64,13 @@ class HandleMomenta:
                     current_model[control_point_i] = [val for val in f.readline().split(sep=' ')[:3]]
                 self.all_models[model_i] = current_model.ravel(order=1)
                 f.readline()
-                
+
     def build_momenta_matrix(self):
         """
         Each of the row vectors in the momenta matrix must be reshaped individually, to avoid picking values one-by-one.
         The reshaped vectors of momenta are pasted into 'reshaped_momenta_matrix' according to the order of models in
         the original matrix of momenta.
+
         :return: The reshaped momenta matrix with size dependent on the number of control points and models for rows and
         dimensionality of the models for columns.
         """
