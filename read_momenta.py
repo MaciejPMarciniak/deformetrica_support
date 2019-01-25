@@ -8,7 +8,7 @@ class HandleMomenta:
     Class for handling momenta file, which is a result of atlas computation of deformetrica deterministic atlas
     algorithm.
     """
-    def __init__(self, momenta_file_path='', momenta_filename='', output_path='', output_filename= '',
+    def __init__(self, momenta_file_path='', momenta_filename='', output_path='', output_filename='',
                  momenta_matrix=None, configuration='deformetrica'):
         """
         Read the basic information about the data set
@@ -16,7 +16,7 @@ class HandleMomenta:
         :param momenta_file_path: hard path to the generated momenta file
         """
         self.momenta_file_path = momenta_file_path
-        self.output_path = output_path
+        self.output_path = momenta_file_path if output_path == '' else output_path
         self.momenta_file = os.path.join(momenta_file_path, momenta_filename)
         self.output_file = os.path.join(output_path, output_filename)
         self.configuration = configuration
@@ -99,7 +99,7 @@ if __name__ == '__main__':
                                    'output_separate_tmp10_def10_prttpe8_aligned', 'Decomposition')
     momenta_vec = 'extreme_momenta.csv'
     momenta_new = 'Extreme_Momenta.txt'
-    momenta = HandleMomenta(path_to_momenta, momenta_vec, path_to_momenta, momenta_new, 'extreme')
+    momenta = HandleMomenta(path_to_momenta, momenta_vec,  output_filename=momenta_new, configuration='extreme')
     momenta.save_momenta_matrix_in_deformetrica_format()
     # momenta.transform_momementa_into_table()
     # momenta.save_momenta_table()
