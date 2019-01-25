@@ -70,7 +70,9 @@ class BuildXML:
 
 class DataSet(BuildXML):
     """Class for building the data-set.xml file. Saved as data-set.xml in the 'source' directory.
-    :param source key_word list_of_elements: parameters passed to the superclass BuildXML"""
+
+    :param source key_word list_of_elements: parameters passed to the superclass BuildXML
+    """
     def __init__(self, source='data', key_word=None,  list_of_elements=None):
 
         super().__init__(source, key_word, list_of_elements)

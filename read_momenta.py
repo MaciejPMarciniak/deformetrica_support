@@ -6,10 +6,7 @@ import numpy as np
 class HandleMomenta:
     """
     Class for handling momenta file, which is a result of atlas computation of deformetrica deterministic atlas
-    algorithm. The 'read_momenta_file' method transforms original file to a table where number of rows is determined
-    by the number of models used to calculate the atlas, and columns describe deformation of the template (average
-    shape) in x, y and z direction, with regards to control points, effectively defining the warping field for each
-    original model.
+    algorithm.
     """
     def __init__(self, momenta_file_path='', momenta_filename='', output_path='', output_filename= '',
                  momenta_matrix=None, configuration='deformetrica'):
@@ -48,9 +45,11 @@ class HandleMomenta:
 
     def transform_momementa_into_table(self):
         """
-        Read the momenta sequentially and append them to a single table.
-        :return: Momenta of all models. The order of values corresponds to dimension: in a row, firstly all the x values
-        are given, then all the y, then z.
+        The method transforms original file to a table where number of rows is determined by the number of models used
+        to calculate the atlas, and columns describe deformation of the template (average shape) in x, y and z
+        direction, with regards to control points, effectively defining the warping field for each original model.
+        :return: self.all_modesl - Momenta of all models. The order of values corresponds to dimension: in a row,
+        firstly all the x values are given, then all the y, then z.
         """
         self.all_models = np.zeros((self.n_models, self.n_control_points*self.n_dimensions))
         with open(self.momenta_file, 'r') as f:
@@ -63,10 +62,7 @@ class HandleMomenta:
                     current_model[control_point_i] = [val for val in f.readline().split(sep=' ')[:3]]
                 self.all_models[model_i] = current_model.ravel(order=1)
                 f.readline()
-
-    def save_momenta_table(self):
-        self.save_result('DeterministicAtlas__EstimatedParameters__Momenta_Table.csv', self.all_models)
-
+                
     def build_momenta_matrix(self):
         """
         Each of the row vectors in the momenta matrix must be reshaped individually, to avoid picking values one-by-one.
@@ -81,8 +77,10 @@ class HandleMomenta:
                 self.momenta_matrix[model_number].reshape((self.n_control_points, self.n_dimensions), order=1)
         return reshaped_momenta_matrix
 
-    def save_momenta_matrix_in_deformetrica_format(self):
+    def save_momenta_table(self):
+        self.save_result('DeterministicAtlas__EstimatedParameters__Momenta_Table.csv', self.all_models)
 
+    def save_momenta_matrix_in_deformetrica_format(self):
         with open(self.output_file, 'w') as f:
             f.write('{} {} {}\n\n'.format(self.n_models, self.n_control_points, self.n_dimensions))
             for model_number in range(self.n_models):
