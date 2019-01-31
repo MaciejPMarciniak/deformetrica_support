@@ -268,19 +268,19 @@ class ModelShooting(BuildXML):
 
 if __name__ == '__main__':
 
-    ds = DataSet(source=os.path.join(str(Path.home()), 'Python', 'data', 'gen_r_ed'),
+    ds = DataSet(source=os.path.join(str(Path.home()), 'Python', 'data', 'gen_r'),
                  key_word='Case',
                  list_of_elements=None)
     ds.build_with_lxml_tree()
-    ds.write_xml('/home/mat/Deformetrica/generation_r_ed')
+    ds.write_xml('/home/mat/Deformetrica/generation_r')
 
-    mdl = ModelAtlas(source=os.path.join(str(Path.home()), 'Python', 'data', 'gen_r_ed'),
+    mdl = ModelAtlas(source=os.path.join(str(Path.home()), 'Python', 'data', 'gen_r'),
                      key_word='Case',
                      prototype_id=1288532, list_of_elements=None,
-                     deformation_kernel_width=10,
-                     prototype_kernel_width=10)
+                     deformation_kernel_width=5,
+                     prototype_kernel_width=5)
     mdl.build_with_lxml_tree()
-    mdl.write_xml('/home/mat/Deformetrica/generation_r_ed')
+    mdl.write_xml('/home/mat/Deformetrica/generation_r')
 
     # mom_mdl = ModelShooting(source=os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
     #                                             'output_separate_tmp10_def10_prttpe8_aligned', 'Decomposition'),
