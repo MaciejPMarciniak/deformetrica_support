@@ -39,14 +39,20 @@ class BuildXML:
             if self.current_id in f:
                 list_of_elements_with_id.append(f)
         return list_of_elements_with_id
+    #  -------------------------------------------
 
     def find_ids(self):
 
         list_of_ids = []
         for filename in self.files:
             file_id = re.findall(r'\d+', filename)
-            list_of_ids.append(file_id[0],)
+            list_of_ids.append(''.join(file_id),)
         return list_of_ids
+    #  -------------------------------------------
+
+    def get_subject_filename(self):
+        return glob.glob1(self.source, '*'+self.current_id+'*')[0]
+    #  -------------------------------------------
 
     def get_element_filename(self):
 
@@ -57,6 +63,7 @@ class BuildXML:
                 return found_element_file
         if not found_element_file:
             exit('Element {} in subject {} is missing!'.format(self.elem, self.current_id))
+    #  -------------------------------------------
 
     def write_xml(self, output=None):
 
@@ -66,6 +73,7 @@ class BuildXML:
         pretty_top = tostring(self.top, pretty_print=True, xml_declaration=True)
         with open(filename, 'wb') as f:
             f.write(pretty_top)
+    #  -------------------------------------------
 
 
 class DataSet(BuildXML):
@@ -94,14 +102,15 @@ class DataSet(BuildXML):
 
             subject = SubElement(self.top, 'subject', id='sub{}'.format(self.current_id))
             visit = SubElement(subject, 'visit', id='varifold')
-            if self.element_files:
+
+            if self.list_of_elements:
                 for element in self.list_of_elements:
                     self.elem = '_' + element
                     filename = SubElement(visit, 'filename', object_id=element)
                     filename.text = self.get_element_filename()
             else:
                 filename = SubElement(visit, 'filename', object_id=self.key_word)
-                filename.text = glob.glob(os.path.join(self.source, '{}.vtk'.format(self.current_id)))
+                filename.text = os.path.join(self.source, self.get_subject_filename())
 
 
 class ModelAtlas(BuildXML):
@@ -130,6 +139,8 @@ class ModelAtlas(BuildXML):
         self.files = []
         if not list_of_elements:
             self.files = glob.glob(os.path.join(source, '*{}*.vtk'.format(self.prototype_id)))
+            if not self.files:
+                exit('Prototype file missing, check the source path and folder.')
         else:
             for elem in list_of_elements:
                 self.elem = elem
@@ -163,7 +174,7 @@ class ModelAtlas(BuildXML):
 
         self.element_files = self.find_elements()
 
-        if self.element_files:
+        if self.list_of_elements:
             for element in self.list_of_elements:
                 self.elem = '_' + element
                 obj = SubElement(template, 'object', id=element)
@@ -172,7 +183,7 @@ class ModelAtlas(BuildXML):
                 filename.text = self.get_element_filename()
         else:
             obj = SubElement(template, 'object', id=self.key_word)
-            self.insert_default_branches()
+            self.insert_default_branches(obj)
             filename = SubElement(obj, 'filename')
             filename.text = self.files[0]
 
@@ -257,26 +268,26 @@ class ModelShooting(BuildXML):
 
 if __name__ == '__main__':
 
-    # ds = DataSet(source=os.path.join(str(Path.home()), 'Python', 'data', 'case_', 'aligned_meshes'),
-    #              key_word='case_',
-    #              list_of_elements=_list_of_elements)
-    # ds.build_with_lxml_tree()
-    # ds.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct/')
-    #
-    # mdl = ModelAtlas(source=os.path.join(str(Path.home()), 'Python', 'data', 'case_', 'aligned_meshes'),
-    #                  key_word='case_',
-    #                  prototype_id=3, list_of_elements=_list_of_elements,
-    #                  deformation_kernel_width=10,
-    #                  prototype_kernel_width=10)
-    # mdl.build_with_lxml_tree()
-    # mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct/')
+    ds = DataSet(source=os.path.join(str(Path.home()), 'Python', 'data', 'gen_r_ed'),
+                 key_word='Case',
+                 list_of_elements=None)
+    ds.build_with_lxml_tree()
+    ds.write_xml('/home/mat/Deformetrica/generation_r_ed')
 
-    mom_mdl = ModelShooting(source=os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
-                                                'output_separate_tmp10_def10_prttpe8_aligned', 'Decomposition'),
-                            key_word='Template',
-                            momenta_filename='Extreme_Momenta.txt',
-                            list_of_elements=_list_of_elements,
-                            deformation_kernel_width=10)
-    print(mom_mdl.source)
-    mom_mdl.build_with_lxml_tree()
-    mom_mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct/')
+    mdl = ModelAtlas(source=os.path.join(str(Path.home()), 'Python', 'data', 'gen_r_ed'),
+                     key_word='Case',
+                     prototype_id=1288532, list_of_elements=None,
+                     deformation_kernel_width=10,
+                     prototype_kernel_width=10)
+    mdl.build_with_lxml_tree()
+    mdl.write_xml('/home/mat/Deformetrica/generation_r_ed')
+
+    # mom_mdl = ModelShooting(source=os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
+    #                                             'output_separate_tmp10_def10_prttpe8_aligned', 'Decomposition'),
+    #                         key_word='Template',
+    #                         momenta_filename='Extreme_Momenta.txt',
+    #                         list_of_elements=_list_of_elements,
+    #                         deformation_kernel_width=10)
+    # print(mom_mdl.source)
+    # mom_mdl.build_with_lxml_tree()
+    # mom_mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct/')
