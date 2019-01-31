@@ -239,7 +239,7 @@ class ModelShooting(BuildXML):
 
         self.element_files = self.find_elements()
 
-        if self.element_files:
+        if self.list_of_elements:
             for element in self.list_of_elements:
                 self.elem = '_' + element
                 obj = SubElement(template, 'object', id=element)
