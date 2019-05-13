@@ -4,9 +4,6 @@ from pathlib import Path
 from lxml.etree import Element, SubElement, tostring
 import regex as re
 
-_list_of_elements = ['LV', 'RV', 'LA', 'RA', 'AO', 'PA', 'MV', 'TV', 'AV', 'PV', 'APP', 'LIPV', 'LSPV', 'RSPV', 'RIPV',
-                     'SVC', 'IVC']
-
 
 class BuildXML:
     """
@@ -20,11 +17,17 @@ class BuildXML:
     :param list_of_elements: list provided to find all elements belonging to a model. If not provided, model(s)
     is(are) searched.
     """
+
+    _list_of_elements_24 = ['LV', 'RV', 'LA', 'RA', 'AO', 'PA', 'MV', 'TV', 'AV', 'PV',
+                            'APP', 'LSPV', 'LIPV', 'RIPV', 'RSPV', 'SVC', 'IVC',
+                            'AB', 'RIPVB', 'LIPVB', 'LSPVB', 'RSPVB', 'SVCB', 'IVCB']
+
     def __init__(self, source='data', key_word=None,  list_of_elements=None):
 
         self.source = source
         self.output = self.source
-        self.list_of_elements = list_of_elements
+
+        self.list_of_elements = self._list_of_elements_24 if list_of_elements is None else list_of_elements
         self.key_word = key_word
         self.element_files = []
         self.elem = ''
@@ -162,6 +165,7 @@ class ModelAtlas(BuildXML):
         kernel_type.text = 'keops'
         noise_st = SubElement(obj, 'noise-std')
         noise_st.text = self.noise_std
+    #  -------------------------------------------
 
     def build_with_lxml_tree(self):
 
@@ -264,29 +268,28 @@ class ModelShooting(BuildXML):
         kernel_width.text = self.deformation_kernel_width
         kernel_type = SubElement(deformation_parameters, 'kernel-type')
         kernel_type.text = 'keops'  # Allows for CUDA usage - expedites the proces exponentially
+    #  -------------------------------------------
 
 
 if __name__ == '__main__':
 
-    ds = DataSet(source=os.path.join(str(Path.home()), 'Python', 'data', 'gen_r'),
-                 key_word='Case',
-                 list_of_elements=None)
+    ds = DataSet(source=os.path.join(str(Path.home()), 'Python', 'data', 'h_case'),
+                 key_word='h_case')
     ds.build_with_lxml_tree()
-    ds.write_xml('/home/mat/Deformetrica/generation_r')
+    ds.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
 
-    mdl = ModelAtlas(source=os.path.join(str(Path.home()), 'Python', 'data', 'gen_r'),
-                     key_word='Case',
-                     prototype_id=1288532, list_of_elements=None,
-                     deformation_kernel_width=5,
-                     prototype_kernel_width=5)
+    mdl = ModelAtlas(source=os.path.join(str(Path.home()), 'Python', 'data', 'h_case'),
+                     key_word='h_case',
+                     prototype_id=7,
+                     deformation_kernel_width=10,
+                     prototype_kernel_width=10)
     mdl.build_with_lxml_tree()
-    mdl.write_xml('/home/mat/Deformetrica/generation_r')
+    mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
 
     # mom_mdl = ModelShooting(source=os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
     #                                             'output_separate_tmp10_def10_prttpe8_aligned', 'Decomposition'),
     #                         key_word='Template',
     #                         momenta_filename='Extreme_Momenta.txt',
-    #                         list_of_elements=_list_of_elements,
     #                         deformation_kernel_width=10)
     # print(mom_mdl.source)
     # mom_mdl.build_with_lxml_tree()
