@@ -20,9 +20,9 @@ class HandleMomenta:
         self.momenta_file = os.path.join(momenta_file_path, momenta_filename)
         self.output_file = os.path.join(output_path, output_filename)
         self.configuration = configuration
+        self.all_models = None
 
         if self.configuration == 'deformetrica':
-            self.all_models = None
             with open(self.momenta_file, 'r') as f:
                 self.n_models, self.n_control_points, self.n_dimensions = [int(val) for val in
                                                                            f.readline().split(sep=' ')]
@@ -39,7 +39,7 @@ class HandleMomenta:
             exit('Only "deformetrica" or "extreme" configurations are allowed')
 
     def save_result(self, output_filename=None, data_to_save=None):
-        output_directory = os.path.join(self.output_path, 'Decomposition')
+        output_directory = os.path.join(self.output_path)
         if not os.path.isdir(output_directory):
             os.makedirs(output_directory)
         np.savetxt(os.path.join(output_directory, output_filename), data_to_save, delimiter=',')
@@ -50,7 +50,7 @@ class HandleMomenta:
         to calculate the atlas, and columns describe deformation of the template (average shape) in x, y and z
         direction, with regards to control points, effectively defining the warping field for each original model.
 
-        :return: self.all_modesl - Momenta of all models. The order of values corresponds to dimension: in a row,
+        :return: self.all_models - Momenta of all models. The order of values corresponds to dimension: in a row,
         firstly all the x values are given, then all the y, then z.
         """
         self.all_models = np.zeros((self.n_models, self.n_control_points*self.n_dimensions))
@@ -84,7 +84,7 @@ class HandleMomenta:
         self.save_result('DeterministicAtlas__EstimatedParameters__Momenta_Table.csv', self.all_models)
 
     def save_momenta_matrix_in_deformetrica_format(self):
-        with open(self.output_file, 'w') as f:
+        with open(os.path.join(self.momenta_file_path, self.output_file), 'w') as f:
             f.write('{} {} {}\n\n'.format(self.n_models, self.n_control_points, self.n_dimensions))
             for model_number in range(self.n_models):
                 single_model_momenta = \
@@ -96,10 +96,13 @@ class HandleMomenta:
 
 if __name__ == '__main__':
     path_to_momenta = os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
-                                   'output_separate_tmp10_def10_prttpe8_aligned', 'Decomposition')
+                                   'output_separate_tmp10_def10_prttpe13_aligned', 'Decomposition')
+    momenta_file = 'DeterministicAtlas__EstimatedParameters__Momenta.txt'
     momenta_vec = 'extreme_momenta.csv'
     momenta_new = 'Extreme_Momenta.txt'
+    # TODO: Organize the file reading better, to distinguish between deformetrica and csv readings
     momenta = HandleMomenta(path_to_momenta, momenta_vec,  output_filename=momenta_new, configuration='extreme')
-    momenta.save_momenta_matrix_in_deformetrica_format()
+
     # momenta.transform_momementa_into_table()
     # momenta.save_momenta_table()
+    momenta.save_momenta_matrix_in_deformetrica_format()
