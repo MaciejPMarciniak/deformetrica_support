@@ -48,8 +48,10 @@ class BuildXML:
 
         list_of_ids = []
         for filename in self.files:
-            file_id = re.findall(r'\d+$', filename)  # Takes all numbers from the filename, if $ ommitted
+            print(filename)
+            file_id = re.findall(r'\d+', filename)  # Takes all numbers from the filename, if $ ommitted
             list_of_ids.append(''.join(file_id),)
+        print(list_of_ids)
         return list_of_ids
     #  -------------------------------------------
 
@@ -90,9 +92,12 @@ class DataSet(BuildXML):
 
         self.files = glob.glob(os.path.join(self.source, '*.vtk'))
         self.files.sort()
+        print(self.files)
         self.number_of_cases = len(self.files)
+        print(self.number_of_cases)
         self.ids = list(set(self.find_ids()))
         self.ids.sort()
+        print(self.ids)
         self.current_id = self.ids[0]
         self.element_files = []
         self.elem = ''
@@ -273,25 +278,28 @@ class ModelShooting(BuildXML):
 if __name__ == '__main__':
 
     # # Before atlas construction
-    # ds = DataSet(source=os.path.join(str(Path.home()), 'Python', 'data', 'h_case'),
-    #              key_word='h_case')
-    # ds.build_with_lxml_tree()
-    # ds.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
-    #
-    # mdl = ModelAtlas(source=os.path.join(str(Path.home()), 'Python', 'data', 'h_case'),
-    #                  key_word='h_case',
-    #                  prototype_id=13,
-    #                  deformation_kernel_width=10,
-    #                  prototype_kernel_width=10)
-    # mdl.build_with_lxml_tree()
-    # mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
+    ds = DataSet(source=os.path.join(str(Path.home()), 'Python', 'data', 'h_case'),
+                 key_word='h_case')
+    ds.build_with_lxml_tree()
+    ds.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
+
+    mdl = ModelAtlas(source=os.path.join(str(Path.home()), 'Python', 'data', 'h_case'),
+                     key_word='h_case',
+                     prototype_id=13,
+                     deformation_kernel_width=10,
+                     prototype_kernel_width=10)
+    mdl.build_with_lxml_tree()
+    mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
 
     # # After momenta handling
-    mom_mdl = ModelShooting(source=os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
-                                                'output_separate_tmp10_def10_prttpe13_aligned', 'Decomposition'),
-                            key_word='Template',  # Template copied to Decomposition folder
-                            momenta_filename='Extreme_Momenta.txt',
-                            deformation_kernel_width=10)
-    print(mom_mdl.source)
-    mom_mdl.build_with_lxml_tree()
-    mom_mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
+    # for i in range(1, 34):
+    #     mom_mdl = ModelShooting(source=os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
+    #                                                 'output_separate_tmp10_def10_prttpe13_aligned', 'Decomposition'),
+    #                             key_word='Template',  # Template copied to Decomposition folder
+    #                             momenta_filename='Randomly_weighted_modes_{}.txt'.format(i),
+    #                             deformation_kernel_width=10)
+    #     print(mom_mdl.source)
+    #     mom_mdl.build_with_lxml_tree()
+    #     mom_mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
+    #     os.rename('/home/mat/Deformetrica/deterministic_atlas_ct/model.xml',
+    #               '/home/mat/Deformetrica/deterministic_atlas_ct/model_shooting_{}.xml'.format(i))

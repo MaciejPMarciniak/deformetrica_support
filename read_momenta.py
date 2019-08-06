@@ -98,11 +98,11 @@ if __name__ == '__main__':
     path_to_momenta = os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
                                    'output_separate_tmp10_def10_prttpe13_aligned', 'Decomposition')
     momenta_file = 'DeterministicAtlas__EstimatedParameters__Momenta.txt'
-    momenta_vec = 'extreme_momenta.csv'
-    momenta_new = 'Extreme_Momenta.txt'
-    # TODO: Organize the file reading better, to distinguish between deformetrica and csv readings
-    momenta = HandleMomenta(path_to_momenta, momenta_vec,  output_filename=momenta_new, configuration='extreme')
+    for i in range(1, 34):
+        momenta_vec = 'Randomly_weighted_modes_{}.csv'.format(i)
+        momenta_new = 'Randomly_weighted_modes_{}.txt'.format(i)
+        momenta = HandleMomenta(path_to_momenta, momenta_vec,  output_filename=momenta_new, configuration='extreme')
 
-    # momenta.transform_momementa_into_table()
-    # momenta.save_momenta_table()
-    momenta.save_momenta_matrix_in_deformetrica_format()
+        # momenta.transform_momementa_into_table()
+        # momenta.save_momenta_table()
+        momenta.save_momenta_matrix_in_deformetrica_format()
