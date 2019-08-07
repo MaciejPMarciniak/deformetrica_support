@@ -48,10 +48,8 @@ class BuildXML:
 
         list_of_ids = []
         for filename in self.files:
-            print(filename)
             file_id = re.findall(r'\d+', filename)  # Takes all numbers from the filename, if $ ommitted
             list_of_ids.append(''.join(file_id),)
-        print(list_of_ids)
         return list_of_ids
     #  -------------------------------------------
 
@@ -92,12 +90,9 @@ class DataSet(BuildXML):
 
         self.files = glob.glob(os.path.join(self.source, '*.vtk'))
         self.files.sort()
-        print(self.files)
         self.number_of_cases = len(self.files)
-        print(self.number_of_cases)
         self.ids = list(set(self.find_ids()))
         self.ids.sort()
-        print(self.ids)
         self.current_id = self.ids[0]
         self.element_files = []
         self.elem = ''

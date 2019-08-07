@@ -39,7 +39,7 @@ class HandleMomenta:
             exit('Only "deformetrica" or "extreme" configurations are allowed')
 
     def save_result(self, output_filename=None, data_to_save=None):
-        output_directory = os.path.join(self.output_path)
+        output_directory = self.output_path
         if not os.path.isdir(output_directory):
             os.makedirs(output_directory)
         np.savetxt(os.path.join(output_directory, output_filename), data_to_save, delimiter=',')
@@ -81,7 +81,7 @@ class HandleMomenta:
         return reshaped_momenta_matrix
 
     def save_momenta_table(self):
-        self.save_result('DeterministicAtlas__EstimatedParameters__Momenta_Table.csv', self.all_models)
+        self.save_result('Momenta_Table.csv', self.all_models)
 
     def save_momenta_matrix_in_deformetrica_format(self):
         with open(os.path.join(self.momenta_file_path, self.output_file), 'w') as f:
@@ -95,14 +95,32 @@ class HandleMomenta:
 
 
 if __name__ == '__main__':
-    path_to_momenta = os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
-                                   'output_separate_tmp10_def10_prttpe13_aligned', 'Decomposition')
-    momenta_file = 'DeterministicAtlas__EstimatedParameters__Momenta.txt'
-    for i in range(1, 34):
-        momenta_vec = 'Randomly_weighted_modes_{}.csv'.format(i)
-        momenta_new = 'Randomly_weighted_modes_{}.txt'.format(i)
-        momenta = HandleMomenta(path_to_momenta, momenta_vec,  output_filename=momenta_new, configuration='extreme')
 
-        # momenta.transform_momementa_into_table()
-        # momenta.save_momenta_table()
-        momenta.save_momenta_matrix_in_deformetrica_format()
+    # Transform momenta before PCA
+    path_to_momenta = os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
+                                   'output_separate_tmp10_def10_prttpe13_corrected')
+    output_path = os.path.join(path_to_momenta, 'Decomposition')
+    momenta_file = 'DeterministicAtlas__EstimatedParameters__Momenta.txt'
+    momenta_new = 'Momenta.txt'
+    momenta = HandleMomenta(path_to_momenta,
+                            momenta_file,
+                            output_filename=momenta_new,
+                            output_path=output_path,
+                            configuration='deformetrica')
+
+    momenta.transform_momementa_into_table()
+    momenta.save_momenta_table()
+
+
+    # Generating randomly wighted modes
+    # path_to_momenta = os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
+    #                                'output_separate_tmp10_def10_prttpe13_aligned', 'Decomposition')
+    # momenta_file = 'DeterministicAtlas__EstimatedParameters__Momenta.txt'
+    # for i in range(1, 34):
+    #     momenta_vec = 'Randomly_weighted_modes_{}.csv'.format(i)
+    #     momenta_new = 'Randomly_weighted_modes_{}.txt'.format(i)
+    #     momenta = HandleMomenta(path_to_momenta, momenta_vec,  output_filename=momenta_new, configuration='extreme')
+    #
+    #     # momenta.transform_momementa_into_table()
+    #     # momenta.save_momenta_table()
+    #     momenta.save_momenta_matrix_in_deformetrica_format()
