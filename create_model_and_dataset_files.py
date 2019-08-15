@@ -48,7 +48,7 @@ class BuildXML:
 
         list_of_ids = []
         for filename in self.files:
-            file_id = re.findall(r'\d+', filename)  # Takes all numbers from the filename, if $ ommitted
+            file_id = re.findall(r'\d+$', filename)  # Takes all numbers from the filename, if $ ommitted
             list_of_ids.append(''.join(file_id),)
         return list_of_ids
     #  -------------------------------------------
@@ -273,28 +273,41 @@ class ModelShooting(BuildXML):
 if __name__ == '__main__':
 
     # # Before atlas construction
-    ds = DataSet(source=os.path.join(str(Path.home()), 'Python', 'data', 'h_case'),
-                 key_word='h_case')
-    ds.build_with_lxml_tree()
-    ds.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
+    # ds = DataSet(source=os.path.join(str(Path.home()), 'Python', 'data', 'h_case'),
+    #              key_word='h_case')
+    # ds.build_with_lxml_tree()
+    # ds.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
+    #
+    # mdl = ModelAtlas(source=os.path.join(str(Path.home()), 'Python', 'data', 'h_case'),
+    #                  key_word='h_case',
+    #                  prototype_id=13,
+    #                  deformation_kernel_width=10,
+    #                  prototype_kernel_width=10)
+    # mdl.build_with_lxml_tree()
+    # mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
 
-    mdl = ModelAtlas(source=os.path.join(str(Path.home()), 'Python', 'data', 'h_case'),
-                     key_word='h_case',
-                     prototype_id=13,
-                     deformation_kernel_width=10,
-                     prototype_kernel_width=10)
-    mdl.build_with_lxml_tree()
-    mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
+    # TODO: Construct a better search for elements, as the current one might use only a part of the full element,
+    # TODO: e.g. svc and svcb
+    # # After momenta handling - extreme modes, requires the $ in the wild card in search for IDs
+    # mom_mdl = ModelShooting(source=os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
+    #                                             'output_separate_tmp10_def10_prttpe13_corrected', 'Decomposition'),
+    #                         key_word='Template',  # Template copied to Decomposition folder
+    #                         momenta_filename='Extreme_Momenta.txt',
+    #                         deformation_kernel_width=10)
+    # print(mom_mdl.source)
+    # mom_mdl.build_with_lxml_tree()
+    # mom_mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
+    # os.rename('/home/mat/Deformetrica/deterministic_atlas_ct/model.xml',
+    #           '/home/mat/Deformetrica/deterministic_atlas_ct/model_shooting.xml')
 
-    # # After momenta handling
-    # for i in range(1, 34):
-    #     mom_mdl = ModelShooting(source=os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
-    #                                                 'output_separate_tmp10_def10_prttpe13_aligned', 'Decomposition'),
-    #                             key_word='Template',  # Template copied to Decomposition folder
-    #                             momenta_filename='Randomly_weighted_modes_{}.txt'.format(i),
-    #                             deformation_kernel_width=10)
-    #     print(mom_mdl.source)
-    #     mom_mdl.build_with_lxml_tree()
-    #     mom_mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
-    #     os.rename('/home/mat/Deformetrica/deterministic_atlas_ct/model.xml',
-    #               '/home/mat/Deformetrica/deterministic_atlas_ct/model_shooting_{}.xml'.format(i))
+    # After 'read momenta' -
+    for i in range(1, 41):
+        mom_mdl = ModelShooting(source=os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
+                                                    'output_separate_tmp10_def10_prttpe13_corrected', 'Decomposition'),
+                                key_word='Template',  # Template copied to Decomposition folder
+                                momenta_filename='Randomly_weighted_modes_{}.txt'.format(i),
+                                deformation_kernel_width=10)
+        mom_mdl.build_with_lxml_tree()
+        mom_mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
+        os.rename('/home/mat/Deformetrica/deterministic_atlas_ct/model.xml',
+                  '/home/mat/Deformetrica/deterministic_atlas_ct/model_shooting_{}.xml'.format(i))
