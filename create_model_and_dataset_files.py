@@ -131,12 +131,13 @@ class ModelAtlas(BuildXML):
     https://gitlab.icm-institute.org/aramislab/deformetrica/wikis/1_lddmm
     """
     def __init__(self, source='data', key_word=None, list_of_elements=None, prototype_id=None,
-                 deformation_kernel_width=10, prototype_kernel_width=10, noise_std=0.1):
+                 deformation_kernel_width=10, prototype_kernel_width=10, noise_std=0.1, deformable_object='Polyline'):
 
         super().__init__(source, key_word, list_of_elements)
 
         self.deformation_kernel_width = str(deformation_kernel_width)
         self.prototype_kernel_width = str(prototype_kernel_width)
+        self.deformable_object = deformable_object
         self.noise_std = str(noise_std)
         self.prototype_id = str(prototype_id).zfill(2)
         self.files = []
@@ -156,7 +157,7 @@ class ModelAtlas(BuildXML):
 
     def insert_default_branches(self, obj):
         dot = SubElement(obj, 'deformable-object-type')
-        dot.text = 'Polyline'
+        dot.text = self.deformable_object
         at = SubElement(obj, 'attachment-type')
         at.text = 'Varifold'
         kernel_width = SubElement(obj, 'kernel-width')
@@ -214,11 +215,12 @@ class ModelShooting(BuildXML):
         https://gitlab.icm-institute.org/aramislab/deformetrica/wikis/1_lddmm
         """
     def __init__(self, source='data', key_word=None, list_of_elements=None, momenta_filename=None,
-                 deformation_kernel_width=10):
+                 deformation_kernel_width=10, deformable_object='Polyline'):
 
         super().__init__(source, key_word, list_of_elements)
         self.momenta_file = os.path.join(source, momenta_filename)
         self.deformation_kernel_width = str(deformation_kernel_width)
+        self.deformable_object = deformable_object
         self.files = []
         if not list_of_elements:
             self.files = glob.glob(os.path.join(source, '*.vtk'))
@@ -248,13 +250,13 @@ class ModelShooting(BuildXML):
                 obj = SubElement(template, 'object', id=element)
                 filename = SubElement(obj, 'filename')
                 dot = SubElement(obj, 'deformable-object-type')
-                dot.text = 'Polyline'
+                dot.text = self.deformable_object
                 filename.text = self.get_element_filename()
         else:
             obj = SubElement(template, 'object', id=self.key_word)
             filename = SubElement(obj, 'filename')
             dot = SubElement(obj, 'deformable-object-type')
-            dot.text = 'Polyline'
+            dot.text = self.deformable_object
             filename.text = self.files[0]
 
         initial_control_points = SubElement(self.top, 'initial-control-points')
@@ -270,44 +272,55 @@ class ModelShooting(BuildXML):
     #  -------------------------------------------
 
 
-if __name__ == '__main__':
+def prepare_data_for_atlas_construction(source_path=os.path.join(str(Path.home()), 'Python', 'data', 'h_case'),
+                                        output_path='/home/mat/Deformetrica/deterministic_atlas_ct',
+                                        key_word='h_case'):
+    ds = DataSet(source=os.path.join(source_path),
+                 key_word=key_word)
+    ds.build_with_lxml_tree()
+    ds.write_xml(output_path)
+    mdl = ModelAtlas(source=source_path,
+                     key_word=key_word,
+                     prototype_id=13,
+                     deformation_kernel_width=10,  # lambda_V
+                     prototype_kernel_width=10,
+                     deformable_object='Polyline')  # lambda_W
+    mdl.build_with_lxml_tree()
+    mdl.write_xml(output_path)
 
-    # # Before atlas construction
-    # ds = DataSet(source=os.path.join(str(Path.home()), 'Python', 'data', 'h_case'),
-    #              key_word='h_case')
-    # ds.build_with_lxml_tree()
-    # ds.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
-    #
-    # mdl = ModelAtlas(source=os.path.join(str(Path.home()), 'Python', 'data', 'h_case'),
-    #                  key_word='h_case',
-    #                  prototype_id=13,
-    #                  deformation_kernel_width=10,
-    #                  prototype_kernel_width=10)
-    # mdl.build_with_lxml_tree()
-    # mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
 
-    # TODO: Construct a better search for elements, as the current one might use only a part of the full element,
-    # TODO: e.g. svc and svcb
-    # # After momenta handling - extreme modes, requires the $ in the wild card in search for IDs
-    # mom_mdl = ModelShooting(source=os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
-    #                                             'output_separate_tmp10_def10_prttpe13_corrected', 'Decomposition'),
-    #                         key_word='Template',  # Template copied to Decomposition folder
-    #                         momenta_filename='Extreme_Momenta.txt',
-    #                         deformation_kernel_width=10)
-    # print(mom_mdl.source)
-    # mom_mdl.build_with_lxml_tree()
-    # mom_mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
-    # os.rename('/home/mat/Deformetrica/deterministic_atlas_ct/model.xml',
-    #           '/home/mat/Deformetrica/deterministic_atlas_ct/model_shooting.xml')
+def prep_modes_for_reconstruction(source_path=os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
+                                                           'output_separate_tmp10_def10_prttpe13_corrected',
+                                                           'Decomposition'),
+                                  output_path='/home/mat/Deformetrica/deterministic_atlas_ct'):
 
-    # After 'read momenta' -
+    # extreme modes, requires the $ in the wild card in search for IDs [method find_ids()]
+    mom_mdl = ModelShooting(source=source_path,
+                            key_word='Template',  # Template copied to Decomposition folder
+                            momenta_filename='Extreme_Momenta.txt',
+                            deformation_kernel_width=10,
+                            deformable_object='Polyline')
+    print(mom_mdl.source)
+    mom_mdl.build_with_lxml_tree()
+    mom_mdl.write_xml(output_path)
+    os.rename(os.path.join(output_path, 'model.xml'), os.path.join(output_path, 'model_shooting.xml'))
+
+
+def prep_cohort_for_reconstruction(source_path=os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
+                                                            'output_separate_tmp10_def10_prttpe13_corrected',
+                                                            'Decomposition', 'RandomMeshGeneration'),
+                                   output_path='/home/mat/Deformetrica/deterministic_atlas_ct'):
+
     for i in range(1, 41):
-        mom_mdl = ModelShooting(source=os.path.join(str(Path.home()), 'Deformetrica', 'deterministic_atlas_ct',
-                                                    'output_separate_tmp10_def10_prttpe13_corrected', 'Decomposition'),
+        mom_mdl = ModelShooting(source=source_path,
                                 key_word='Template',  # Template copied to Decomposition folder
                                 momenta_filename='Randomly_weighted_modes_{}.txt'.format(i),
                                 deformation_kernel_width=10)
         mom_mdl.build_with_lxml_tree()
-        mom_mdl.write_xml('/home/mat/Deformetrica/deterministic_atlas_ct')
-        os.rename('/home/mat/Deformetrica/deterministic_atlas_ct/model.xml',
-                  '/home/mat/Deformetrica/deterministic_atlas_ct/model_shooting_{}.xml'.format(i))
+        mom_mdl.write_xml(output_path)
+        os.rename(os.path.join(output_path, 'model.xml'), os.path.join(output_path, 'model_shooting_{}.xml'.format(i)))
+
+
+if __name__ == '__main__':
+
+    prep_cohort_for_reconstruction()
