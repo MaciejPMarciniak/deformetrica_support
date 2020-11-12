@@ -102,7 +102,7 @@ def transform_momenta_before_pca(path_to_momenta=os.path.join(str(Path.home()), 
                                                              'output_separate_tmp3_def10_prttpe13_corrected',
                                                              'Decomposition'),
                                  momenta_file='DeterministicAtlas__EstimatedParameters__Momenta.txt',
-                                 momenta_new = 'Momenta.txt'):
+                                 momenta_new='Momenta.txt'):
     momenta = HandleMomenta(path_to_momenta,
                             momenta_file,
                             output_filename=momenta_new,
@@ -113,16 +113,16 @@ def transform_momenta_before_pca(path_to_momenta=os.path.join(str(Path.home()), 
     momenta.save_momenta_table()
 
 
-def transform_momenta_after_pca(path_to_momenta = os.path.join(str(Path.home()), 'Deformetrica',
+def transform_momenta_after_pca(path_to_momenta=os.path.join(str(Path.home()), 'Deformetrica',
                                                                'deterministic_atlas_ct',
                                                                'output_separate_tmp10_def10_prttpe13_corrected',
                                                                'Decomposition'),
-                                path_to_output = os.path.join(str(Path.home()), 'Deformetrica',
+                                path_to_output=os.path.join(str(Path.home()), 'Deformetrica',
                                                               'deterministic_atlas_ct',
                                                               'output_separate_tmp10_def10_prttpe13_corrected',
                                                               'Decomposition'),
-                                momenta_file = 'extreme_momenta.csv',
-                                momenta_new = 'Extreme_Momenta.txt'):
+                                momenta_file='extreme_momenta.csv',
+                                momenta_new='Extreme_Momenta.txt'):
 
     momenta = HandleMomenta(path_to_momenta,
                             momenta_file,
